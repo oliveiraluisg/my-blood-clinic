@@ -12,7 +12,7 @@ import { IonicModule } from '@ionic/angular';
 })
 export class CalendarPage implements OnInit {
 agendarDoacao() {
-throw new Error('Method not implemented.');
+  window.location.reload();
 }
 data: any;
 horario: any;
@@ -23,5 +23,5 @@ tipoSanguineo: any;
 
   ngOnInit() {
   }
-
+  
 }

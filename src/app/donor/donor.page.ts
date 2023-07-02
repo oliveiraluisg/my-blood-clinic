@@ -17,7 +17,7 @@ endereco: any;
 idade: any;
 nome: any;
 salvarDados() {
-throw new Error('Method not implemented.');
+  window.location.reload();
 }
 
   constructor() { }

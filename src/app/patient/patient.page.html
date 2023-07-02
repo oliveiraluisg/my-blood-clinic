@@ -38,6 +38,11 @@
         <ion-input type="tel" [(ngModel)]="telefone"></ion-input>
       </ion-item>
 
+      <ion-item>
+        <ion-button fill="clear" (click)="takePhoto()">Insira aqui seu documento oficial</ion-button>
+        <ion-img [src]="photoUrl"></ion-img>
+      </ion-item>
+
       <ion-button expand="block" color="#FB4A59" (click)="salvarDados()">Salvar</ion-button>
     </ion-card-content>
   </ion-card>
