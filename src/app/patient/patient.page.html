@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Perfil do Paciente
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button expand="block" fill="clear" href="/home">
+        <ion-label>Home</ion-label>
+      </ion-button> 
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Dados pessoais</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input type="text" [(ngModel)]="nome"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Idade</ion-label>
+        <ion-input type="number" [(ngModel)]="idade"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Endereço</ion-label>
+        <ion-input type="text" [(ngModel)]="endereco"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Telefone</ion-label>
+        <ion-input type="tel" [(ngModel)]="telefone"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" color="#FB4A59" (click)="salvarDados()">Salvar</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

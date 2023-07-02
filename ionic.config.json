@@ -1,0 +1,7 @@
+{
+  "name": "my-blood-clinic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

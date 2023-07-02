@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Histórico de Doações
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button expand="block" fill="clear" href="/home">
+        <ion-label>Home</ion-label>
+      </ion-button> 
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let doacao of doacoes">
+      <ion-label>
+        <h2>{{ doacao.data }}</h2>
+        <p>Tipo sanguíneo: {{ doacao.tipoSanguineo }}</p>
+        <p>Local: {{ doacao.local }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

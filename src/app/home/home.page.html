@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> 
+      Clínica de Coleta de Sangue
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button class="home" expand="block" fill="clear" href="/home">
+        <ion-label>Home</ion-label>
+      </ion-button> 
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="banner">
+    <img src="assets/img/logo.png" alt="Logo da clínica">
+    <h1>Bem-vindo à nossa clínica!</h1>
+    <p>Aqui você pode agendar sua doação de sangue e ajudar a salvar vidas.</p>
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-icon name="calendar" slot="start"></ion-icon>
+      <ion-button expand="block" fill="clear" (click)="goCalendar()">
+        <ion-label>Agendar doação</ion-label>
+      </ion-button> 
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="person" slot="start"></ion-icon>
+      <ion-button expand="block" fill="clear" (click)="goPatient()">
+        <ion-label>Perfil do paciente</ion-label>
+      </ion-button> 
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="person" slot="start"></ion-icon>
+      <ion-button expand="block" fill="clear" (click)="goDonor()">
+        <ion-label>Perfil do doador</ion-label>
+      </ion-button>      
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="time" slot="start"></ion-icon>
+      <ion-button expand="block" fill="clear" (click)="goHistory()">
+        <ion-label>Histórico de doações</ion-label>
+      </ion-button> 
+    </ion-item>
+  </ion-list>
+</ion-content>
