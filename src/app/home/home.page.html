@@ -46,5 +46,11 @@
         <ion-label>Histórico de doações</ion-label>
       </ion-button> 
     </ion-item>
+    <ion-item>
+      <ion-icon name="location" slot="start"></ion-icon>
+      <ion-button expand="block" fill="clear" (click)="getCurrentLocation()">Obter Localização Atual</ion-button>
+      <p *ngIf="latitude && longitude">Latitude: {{ latitude }}</p>
+      <p *ngIf="latitude && longitude">Longitude: {{ longitude }}</p>
+    </ion-item>
   </ion-list>
 </ion-content>

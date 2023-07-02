@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { Geolocation } from '@capacitor/geolocation';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,22 @@ import { Router } from '@angular/router';
   imports: [IonicModule],
 })
 export class HomePage {
+  latitude!: number;
+  longitude!: number;
+
   constructor(private router: Router) {}
+
+  async getCurrentLocation() {
+    try {
+      const coordinates = await Geolocation.getCurrentPosition();
+      this.latitude = coordinates.coords.latitude;
+      this.longitude = coordinates.coords.longitude;
+      console.log('Latitude:', this.latitude);
+      console.log('Longitude:', this.longitude);
+    } catch (error) {
+      console.error('Erro ao obter a localização:', error);
+    }
+  }
 
   goHome() {
     this.router.navigateByUrl('/home');
@@ -28,4 +44,3 @@ export class HomePage {
     this.router.navigateByUrl('/history');
   }
 }
-
